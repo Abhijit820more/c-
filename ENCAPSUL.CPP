@@ -1,46 +1,53 @@
-//Encapsulation program
-
 #include<iostream.h>
 #include<conio.h>
-
 class student
 {
- private:
-	int m1,m2,roll_no,total;
+   private:
 
-	char name[20];
- public:
-	void get();
-	void put();
+      int m1,m2,roll_no,total;
+      float avg;
+      char name[20];
+
+   public:
+
+      void get();
+      void put();
 };
-void student::get()
+void student :: get()
 {
- cout<<"Enter Roll No :-"<<endl;
- cin>>roll_no;
- cout<<"Enter Student Name :-"<<endl;
- cin>>name;
- cout<<"Enter Marks M1 :-"<<endl;
- cin>>m1;
- cout<<"Enter Marks M2 :-"<<endl;
- cin>>m2;
+   cout<<"\n\nEnter Roll No :-> "<<endl;
+   cin>>roll_no;
+   cout<<"Enter Name :-> "<<endl;
+   cin>>name;
+   cout<<"Enter Marks in subject 1 :-> "<<endl;
+   cin>>m1;
+   cout<<"Enter Marks in subject 2 :-> "<<endl;
+   cin>>m2;
 }
-void student::put()
+void student :: put()
 {
-  total=m1+m2;
-  cout<<"***********************OUTPUT***********************"<<endl;
-  cout<<"Roll No :-"<<roll_no<<endl;
-  cout<<"Student Name :-"<<name<<endl;
-  cout<<"Marks M1 :-"<<m1<<endl;
-  cout<<"Marks M2 :-"<<m2<<endl;
-  cout<<"Total Marks :-"<<total<<endl;
+   total=0;
+   total=m1+m2;
+   avg=total/2;
+   cout<<"\n\n--------------------output--------------------";
+   cout<<"\n roll number = \t\t";
+   cout<<roll_no;
+   cout<<"\n name = \t\t";
+   cout<<name;
+   cout<<"\n marks in subject 1 = \t";
+   cout<<m1;
+   cout<<"\n marks in subject 2 = \t";
+   cout<<m2;
+   cout<<"\n total marks = \t\t";
+   cout<<total;
+   cout<<"\n average = \t\t";
+   cout<<avg;
 }
- void main()
- {
-  clrscr();
-  student s1,s2;
-  s1.get();
-  s2.get();
-  s1.put();
-  s2.put();
-  getch();
- }
+void main()
+{
+   clrscr();
+   student s;
+   s.get();
+   s.put();
+   getch();
+}
